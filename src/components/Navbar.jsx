@@ -11,12 +11,12 @@ const Navbar = () => {
         </div>
         <div className="flex justify-center items-center w-2/3">
           <ul className="list-none sm:flex hidden justify-evenly flex-1">
-            <li className="mr-4 cursor-pointer text-white italic">Swiggy Corporate</li>
-            <li className="mr-4 sm:flex hidden cursor-pointer text-white italic">Search</li>
-            <li className="mr-4 md:flex hidden cursor-pointer text-white italic">Offers</li>
-            <li className="mr-4 lg:flex hidden cursor-pointer text-white italic">Help</li>
-            <li className="mr-4 xl:flex hidden cursor-pointer text-white italic">SignIn</li>
-            <li className="mr-4 2xl:flex hidden cursor-pointer text-white italic">Cart</li>
+            <li className="mr-4 cursor-pointer text-neutral-950 italic">Swiggy Corporate</li>
+            <li className="mr-4 sm:flex hidden cursor-pointer text-neutral-950 italic">Search</li>
+            <li className="mr-4 md:flex hidden cursor-pointer text-neutral-950 italic">Offers</li>
+            <li className="mr-4 lg:flex hidden cursor-pointer text-neutral-950 italic">Help</li>
+            <li className="mr-4 xl:flex hidden cursor-pointer text-neutral-950 italic">SignIn</li>
+            <li className="mr-4 2xl:flex hidden cursor-pointer text-neutral-950 italic">Cart</li>
           </ul>
           <div className="sm:hidden flex flex-1 justify-end items-center">
             <img
@@ -27,12 +27,12 @@ const Navbar = () => {
             />
             <div className={`${toggle ? "flex" : "hidden"} rounded-xl absolute top-20 my-2`}>
               <ul className="list-none flex flex-col justify-end flex-1">
-                <li className="mr-4 cursor-pointer text-white italic">Find Events</li>
-                <li className="mr-4 cursor-pointer text-white italic">Create Events</li>
-                <li className="mr-4 cursor-pointer text-white italic">Help Center</li>
-                <li className="mr-4 cursor-pointer text-white italic">Find my tickets</li>
-                <li className="mr-4 cursor-pointer text-white italic">Login</li>
-                <li className="mr-4 cursor-pointer text-white italic">SignUp</li>
+                <li className="mr-4 cursor-pointer text-white italic">Swiggy Corporate</li>
+                <li className="mr-4 cursor-pointer text-white italic">Search</li>
+                <li className="mr-4 cursor-pointer text-white italic">Offers</li>
+                <li className="mr-4 cursor-pointer text-white italic">Help</li>
+                <li className="mr-4 cursor-pointer text-white italic">SignIn</li>
+                <li className="mr-4 cursor-pointer text-white italic">Cart</li>
               </ul>
              </div>
           </div>

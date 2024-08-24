@@ -5,7 +5,7 @@ import React from 'react'
 
 const App = () => {
   return (
-    <div className="bg-black overflow-hidden flex flex-col">
+    <div className="bg-white overflow-hidden flex flex-col">
       <div>
         <Navbar />
       </div>

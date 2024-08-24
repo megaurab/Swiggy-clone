@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { URL } from "../constants";
 import GenieSection from './GenieSection';
+import TopPicks from './TopPicks';
 import Shimmer from './Shimmer';
+import RestaurantList from './RestaurantList';
 
 const Homepage = () => {
 
@@ -30,10 +32,10 @@ const Homepage = () => {
             <GenieSection value={restaurantData}/>
         </div>
         <div>
-            Top picks for you.
+            <TopPicks value={restaurantData}/>
         </div>
         <div>
-            Restaurant List
+            <RestaurantList value={restaurantData}/>
         </div>
         <div>
             Best restaurant Areas
