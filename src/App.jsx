@@ -1,26 +1,21 @@
 
 import Homepage from "./components/Homepage";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
 import React from 'react'
 
 const App = () => {
   return (
     <div className="bg-white overflow-hidden flex flex-col">
-      <div>
+      <div className=" bg-black w-full flex justify-center items-center">
         <Navbar />
       </div>
-      <div>
+      <div className="flex justify-center items-center w-full">
         <Homepage />
       </div>
-      <div className="bg-white ">
-        {/* <Hero /> */}
-      </div>
-      <div>
-        <div>
-          {/* <EventList /> */}
-          {/* <JoinUs /> */}
-          {/* <Footer /> */}
-        </div>
+      <div className="flex justify-center items-center bg-black">
+        <Footer/>
       </div>
     </div>
   )

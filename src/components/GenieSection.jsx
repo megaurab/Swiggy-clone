@@ -8,7 +8,7 @@ const GenieSection = ({value}) => {
   return (
     <div className='flex justify-center items-center'>
         {resData.map((resType)=>(
-            <div key={resType.id}>
+            <div className="ml-[10px] italic" key={resType.id}>
                 {resType?.description}
             </div>
         ))}

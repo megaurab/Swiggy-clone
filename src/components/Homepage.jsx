@@ -27,7 +27,7 @@ const Homepage = () => {
     }
 
   return (
-    <section>
+    <section className='w-2/3'>
         <div>
             <GenieSection value={restaurantData}/>
         </div>
@@ -39,9 +39,6 @@ const Homepage = () => {
         </div>
         <div>
             Best restaurant Areas
-        </div>
-        <div>
-            footer
         </div>
     </section>
   )
