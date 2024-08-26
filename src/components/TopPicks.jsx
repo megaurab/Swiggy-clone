@@ -1,3 +1,5 @@
+import {IMG_URL} from "../constants";
+
 const TopPicks = ({ value }) => {
  
   const resData =
@@ -9,6 +11,9 @@ const TopPicks = ({ value }) => {
       <div className="flex overflow-x-scroll">
         {resData.map((resList) => (
           <div className="ml-[10px] italic" key={resList?.info?.id}>
+             <div>
+              <img src={IMG_URL+resList?.info?.cloudinaryImageId}/>
+            </div>
             {resList?.info?.name}
           </div>
         ))}
