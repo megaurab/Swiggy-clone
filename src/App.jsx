@@ -14,7 +14,7 @@ const App = () => {
       <div className="flex justify-center items-center w-full">
         <Homepage />
       </div>
-      <div className="flex justify-center items-center bg-black">
+      <div className="flex justify-center items-center bg-black mt-[20px]">
         <Footer/>
       </div>
     </div>

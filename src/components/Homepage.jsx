@@ -4,6 +4,7 @@ import GenieSection from './GenieSection';
 import TopPicks from './TopPicks';
 import Shimmer from './Shimmer';
 import RestaurantList from './RestaurantList';
+import RestaurantAreas from './RestaurantAreas';
 
 const Homepage = () => {
 
@@ -38,7 +39,7 @@ const Homepage = () => {
             <RestaurantList value={restaurantData}/>
         </div>
         <div>
-            Best restaurant Areas
+            <RestaurantAreas />
         </div>
     </section>
   )
