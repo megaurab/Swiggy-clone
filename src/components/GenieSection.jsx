@@ -4,7 +4,7 @@ const GenieSection = ({value}) => {
     
 
     const resData = value?.data?.success?.cards[0]?.gridWidget?.gridElements?.infoWithStyle?.info;
-    console.log(resData);
+    // console.log(resData);
   return (
     <div className='flex justify-center items-center'>
         {resData.map((resType)=>(

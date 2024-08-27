@@ -20,7 +20,7 @@ const Homepage = () => {
         const json = await data.json();
         // console.log(json);
         setrestaurantData(json);
-        console.log(json);
+        // console.log(json);
     }
 
     if(restaurantData.length == 0){
