@@ -16,7 +16,7 @@ const Navbar = () => {
             <li className="mr-4 md:flex hidden cursor-pointer text-white italic">Offers</li>
             <li className="mr-4 lg:flex hidden cursor-pointer text-white italic">Help</li>
             <li className="mr-4 xl:flex hidden cursor-pointer text-white italic">SignIn</li>
-            <li className="mr-4 2xl:flex hidden cursor-pointer text-white italic">Cart</li>
+            <li className="mr-4 xl:flex hidden cursor-pointer text-white italic">Cart</li>
           </ul>
           <div className="sm:hidden flex flex-1 justify-end items-center">
             <img
@@ -27,12 +27,12 @@ const Navbar = () => {
             />
             <div className={`${toggle ? "flex" : "hidden"} rounded-xl absolute top-20 my-2`}>
               <ul className="list-none flex flex-col justify-end flex-1">
-                <li className="mr-4 cursor-pointer text-white italic">Swiggy Corporate</li>
-                <li className="mr-4 cursor-pointer text-white italic">Search</li>
-                <li className="mr-4 cursor-pointer text-white italic">Offers</li>
-                <li className="mr-4 cursor-pointer text-white italic">Help</li>
-                <li className="mr-4 cursor-pointer text-white italic">SignIn</li>
-                <li className="mr-4 cursor-pointer text-white italic">Cart</li>
+                <li className="mr-4 cursor-pointer text-pink-300 italic">Swiggy Corporate</li>
+                <li className="mr-4 cursor-pointer text-black italic">Search</li>
+                <li className="mr-4 cursor-pointer text-black italic">Offers</li>
+                <li className="mr-4 cursor-pointer text-black italic">Help</li>
+                <li className="mr-4 cursor-pointer text-black italic">SignIn</li>
+                <li className="mr-4 cursor-pointer text-black italic">Cart</li>
               </ul>
              </div>
           </div>

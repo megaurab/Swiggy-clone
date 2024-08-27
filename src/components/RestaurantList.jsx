@@ -9,6 +9,7 @@ const RestaurantList = ({ value }) => {
 
   return (
     <section className="p-4">
+      <h1 className="italic m-3 font-bold">RESTAURANTS TO CHOOSE FROM:</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {restaurantList.map((restaurant, index) => (
           <RestaurantCard key={index} value={restaurant} />

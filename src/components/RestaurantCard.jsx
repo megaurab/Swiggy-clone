@@ -11,10 +11,10 @@ const RestaurantCard = ({ value }) => {
   } = value?.info;
 
   return (
-    <div className="w-64 h-72 bg-white  rounded-lg shadow-lg m-4 p-[10px] flex-shrink-0">
+    <div className="bg-white rounded-lg shadow-lg m-4 p-[10px] flex-shrink-0 w-64 h-72 sm:w-56 sm:h-64 md:w-48 md:h-60 lg:w-64 lg:h-72">
       <div className="relative">
         <img
-          className="w-full h-36 rounded-lg object-cover"
+          className="w-full h-36 sm:h-32 md:h-28 lg:h-36 rounded-lg object-cover"
           src={IMG_URL + cloudinaryImageId}
           alt={name}
         />
