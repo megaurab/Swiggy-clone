@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { IMG_URL } from "../constants";
+import RestaurantCard from "./RestaurantCard";
 
 const TopPicks = ({ value }) => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
@@ -50,12 +51,7 @@ const TopPicks = ({ value }) => {
       </div>
       <div className="flex overflow-x-scroll">
         {filteredRestaurants.map((resList) => (
-          <div className="ml-[10px] italic" key={resList?.info?.id}>
-            <div>
-              <img src={IMG_URL + resList?.info?.cloudinaryImageId} />
-            </div>
-            {resList?.info?.name}
-          </div>
+          <RestaurantCard value={resList}/>
         ))}
       </div>
     </section>
