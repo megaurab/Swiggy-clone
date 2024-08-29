@@ -1,9 +1,9 @@
-
-import Homepage from "./components/Homepage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
 import React from 'react'
+import Homepage from "./components/Homepage";
+import RestaurantMenu from "./components/RestaurantMenu";
+import { createBrowserRouter, Outlet } from "react-router-dom";
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
         <Navbar />
       </div>
       <div className="flex justify-center items-center w-full">
-        <Homepage />
+        <Outlet />
       </div>
       <div className="flex justify-center items-center bg-black mt-[20px]">
         <Footer/>
@@ -21,4 +21,22 @@ const App = () => {
   )
 }
 
-export default App
+const appRouter = createBrowserRouter([
+  {
+    path:"/",
+    element:<App />,
+    errorElement:<Error />,
+    children:[
+      {
+        path:"/",
+        element:<Homepage />
+      },
+      {
+        path:"/restaurants/:restaurantId",
+        element:<RestaurantMenu />
+      }
+    ]
+  }
+])
+
+export default appRouter;

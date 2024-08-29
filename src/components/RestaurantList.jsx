@@ -1,4 +1,5 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard,{ EnhancedRestaurantCard } from "./RestaurantCard";
+import { Link } from "react-router-dom";
 
 const RestaurantList = ({ value }) => {
   const restaurantList =
@@ -7,12 +8,16 @@ const RestaurantList = ({ value }) => {
     value?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle
       ?.restaurants;
 
+ const PromotedCard = EnhancedRestaurantCard(RestaurantCard);
+
   return (
     <section className="p-4">
       <h1 className="italic m-3 font-bold">RESTAURANTS TO CHOOSE FROM:</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {restaurantList.map((restaurant, index) => (
-          <RestaurantCard key={index} value={restaurant} />
+         <Link key={restaurant.info.id} to={`/restaurants/${restaurant.info.id}`}>
+         { restaurant.info.promoted == true?<PromotedCard value={restaurant}/>:<RestaurantCard value={restaurant} />}
+        </Link>
         ))}
       </div>
     </section>
