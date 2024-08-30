@@ -11,7 +11,7 @@ const useRestaurantMenu = ( restaurantId ) => {
   const fetchRestaurantMenu = async () => {
     const data = await fetch(MENU_URL + restaurantId);
     const jsonData = await data.json();
-      console.log(jsonData);
+      // console.log(jsonData);
     setRestaurantInfo(jsonData);
   };
   return restaurantInfo;
