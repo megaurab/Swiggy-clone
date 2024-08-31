@@ -9,6 +9,13 @@ const RestaurantMenu = () => {
 
   const restaurantMenu = useRestaurantMenu(restaurantId);
   // console.log(restaurantMenu);
+  
+  if (restaurantMenu === null) {
+    return <Shimmer />;
+  }
+
+  const { id, name, avgRating, cuisines } =
+  restaurantMenu?.data?.cards[2]?.card?.card?.info;
 
   const categories =
     restaurantMenu?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
@@ -21,12 +28,12 @@ const RestaurantMenu = () => {
 
 //   console.log(categories);
 
-  if (restaurantMenu === null) {
-    return <Shimmer />;
-  }
+ 
 
   return (
   <div className="text-center">
+    <h1 className="font-bold my-6 text-2xl">{name}</h1>
+    <p className="font-bold text-lg">{cuisines.join(",")}</p>
     {categories.map((category)=>(
         <RestaurantCategory 
         key={category?.card?.card?.title}
