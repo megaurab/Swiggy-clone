@@ -1,7 +1,7 @@
 import { IMG_URL } from "../constants";
 
 const ItemList = ({ items }) => {
-  console.log(items);
+  // console.log(items);
   return (
     <div>
       {items.map((item) => (
@@ -20,13 +20,6 @@ const ItemList = ({ items }) => {
                 {item?.card?.info?.price / 100 ||
                   item?.itemCards?.[0]?.card?.info?.price / 100}
               </p>
-              {/* <img
-                src={
-                  IMG_URL +
-                  (item?.card?.info?.imageId ||
-                    item?.itemCards?.[0]?.card?.info?.imageId)
-                }
-              ></img> */}
             </div>
             <p className="text-xs italic">
               {item?.card?.info?.description ||
@@ -34,12 +27,17 @@ const ItemList = ({ items }) => {
             </p>
           </div>
           <div className="w-3/12 p-4">
-            <div>
-              <button className="p-2 mx-16 rounded-lg bg-white shadow-lg absolute">
+            <div className="w-full">
+              <button className="mt-11 ml-3 p-1 rounded-lg bg-white shadow-lg absolute italic">
                 Add +
               </button>
+              <img src={
+                  IMG_URL +
+                  (item?.card?.info?.imageId ||
+                    item?.itemCards?.[0]?.card?.info?.imageId)
+                } className="rounded-xl" />
             </div>
-            {/* <img src={} className="" /> */}
+           
           </div>
         </div>
       ))}

@@ -1,9 +1,13 @@
 import React from 'react'
 import ItemList from './ItemList';
 
-const RestaurantCategory = ({value}) => {
+const RestaurantCategory = ({value,setItems,setShowIndex}) => {
 
-  console.log(value);
+  // console.log(value);
+  const handleClick = () =>{
+    setShowIndex();
+  }
+
   return (
     <div>
     {/* header */}
@@ -12,11 +16,11 @@ const RestaurantCategory = ({value}) => {
         <span className="font-bold text-lg ml-[15px]">
           {value.title}({value?.categories?.length || value?.itemCards?.length})
         </span>
-        <span className="cursor-pointer">↓</span>
+        <span onClick={handleClick} className="cursor-pointer">↓</span>
       </div>
       {/* body */}
       {/* {showItems && <ItemList items={data?.itemCards || data?.categories} />} */}
-      <ItemList items={value?.itemCards || value?.categories}/>
+      {setItems && <ItemList items={value?.itemCards || value?.categories}/>}
     </div> 
   </div>
   )
