@@ -7,6 +7,7 @@ const RestaurantList = ({ value }) => {
       ?.restaurants ||
     value?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle
       ?.restaurants;
+  console.log(restaurantList);
 
  const PromotedCard = EnhancedRestaurantCard(RestaurantCard);
 

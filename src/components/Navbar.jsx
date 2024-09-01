@@ -1,9 +1,15 @@
 import { useState } from "react";
 import {menu,close} from "../assets";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 
 
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
+
+    const cartItems = useSelector((store)=>store.cart.cartItems);
+    console.log(cartItems);
     return (
       <nav className="flex justify-between w-full">
         <div className="w-1/3">
@@ -16,7 +22,7 @@ const Navbar = () => {
             <li className="mr-4 md:flex hidden cursor-pointer text-white italic">Offers</li>
             <li className="mr-4 lg:flex hidden cursor-pointer text-white italic">Help</li>
             <li className="mr-4 xl:flex hidden cursor-pointer text-white italic">SignIn</li>
-            <li className="mr-4 xl:flex hidden cursor-pointer text-white italic">Cart</li>
+            <Link to="/cart"><li className="mr-4 xl:flex hidden cursor-pointer text-white italic">Cart({cartItems.length}) items</li></Link>
           </ul>
           <div className="sm:hidden flex flex-1 justify-end items-center">
             <img
@@ -32,7 +38,8 @@ const Navbar = () => {
                 <li className="mr-4 cursor-pointer text-black italic">Offers</li>
                 <li className="mr-4 cursor-pointer text-black italic">Help</li>
                 <li className="mr-4 cursor-pointer text-black italic">SignIn</li>
-                <li className="mr-4 cursor-pointer text-black italic">Cart</li>
+                <Link to="/cart"><li className="mr-4 cursor-pointer text-black italic">Cart({cartItems.length}) items</li></Link>L
+                {/* <Link to="/cart"><li className="px-4 m-3 font-bold text-xl">Cart({cartItems.length}) items</li></Link> */}
               </ul>
              </div>
           </div>
