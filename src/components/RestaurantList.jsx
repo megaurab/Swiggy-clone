@@ -1,6 +1,8 @@
 import RestaurantCard,{ EnhancedRestaurantCard } from "./RestaurantCard";
 import { Link } from "react-router-dom";
 
+const PromotedCard = EnhancedRestaurantCard(RestaurantCard);
+
 const RestaurantList = ({ value }) => {
   const restaurantList =
     value?.data?.success?.cards[3]?.gridWidget?.gridElements?.infoWithStyle
@@ -9,7 +11,7 @@ const RestaurantList = ({ value }) => {
       ?.restaurants;
   console.log(restaurantList);
 
- const PromotedCard = EnhancedRestaurantCard(RestaurantCard);
+
 
   return (
     <section className="p-4">
