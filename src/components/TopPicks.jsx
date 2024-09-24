@@ -50,7 +50,7 @@ const TopPicks = ({ value }) => {
         </button>
       </div>
       <h1 className="italic m-3 font-bold ">TOP PICKS FOR YOU:</h1>
-      <div className="flex overflow-x-scroll">
+      <div className="flex overflow-x-scroll hide-scrollbar">
         {filteredRestaurants.map((resList,index) => (
           <RestaurantCard key={index} value={resList} />
         ))}

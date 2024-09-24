@@ -9,7 +9,7 @@ import RestaurantAreas from './RestaurantAreas';
 const Homepage = () => {
 
     const [restaurantData,setrestaurantData] = useState([]);
-
+    // const dispatch = useDispatch();
 
     useEffect(()=>{
       fetchData();
@@ -18,9 +18,12 @@ const Homepage = () => {
     const fetchData = async() =>{
         const data = await fetch(URL);
         const json = await data.json();
+
+        
         // console.log(json);
         setrestaurantData(json);
         // console.log(json);
+        
     }
 
     if(restaurantData.length == 0){
