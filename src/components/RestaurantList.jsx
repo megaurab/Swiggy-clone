@@ -2,6 +2,7 @@ import RestaurantCard,{ EnhancedRestaurantCard } from "./RestaurantCard";
 import { Link } from "react-router-dom";
 import { addRestaurant } from '../utils/restaurantSlice';
 import {useDispatch} from "react-redux";
+// import { Link } from "react-router-dom";
 
 
 const PromotedCard = EnhancedRestaurantCard(RestaurantCard);

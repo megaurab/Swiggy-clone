@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
+import { Link } from "react-router-dom";
 
 const TopPicks = ({ value }) => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
@@ -8,7 +9,7 @@ const TopPicks = ({ value }) => {
   const resData =
     value?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle
       ?.restaurants;
-  // console.log(resData);
+  console.log(resData);
 
   useEffect(() => {
     if (resData) {
@@ -51,8 +52,11 @@ const TopPicks = ({ value }) => {
       </div>
       <h1 className="italic m-3 font-bold ">TOP PICKS FOR YOU:</h1>
       <div className="flex overflow-x-scroll hide-scrollbar">
-        {filteredRestaurants.map((resList,index) => (
-          <RestaurantCard key={index} value={resList} />
+        {filteredRestaurants.map((resList, index) => (
+          // <Link key={resList.info.id} to={`/restaurants/${resList.info.id}`}>
+          <Link to="/restaurants/resList.info.id">
+            <RestaurantCard key={index} value={resList} />
+          </Link>
         ))}
       </div>
     </section>
